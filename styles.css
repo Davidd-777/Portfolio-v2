@@ -1,0 +1,635 @@
+:root{
+    --navbar-color: wheat;
+    --text-color: black;
+    --titles-color: rgb(249, 108, 0)
+}
+
+html{
+    scroll-behavior:smooth;
+    overflow-x: hidden;
+   
+}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: wheat; 
+  
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(249, 108, 0); 
+    border-radius: 5px;
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0); 
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(16, 16, 16);
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Zen Dots', cursive;
+}
+
+/* ---------HEADER-------- */
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: wheat;
+    overflow: hidden;
+}
+
+.skate-container{
+    background-image: url(/MediaV2/header-removeed.png);
+    background-position: cover;
+    width: 30em;
+    height: 22em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    display: block;
+    animation: skateSlide 6s ease-in 1.5s infinite;
+}
+
+.navbar{
+    width: 100%;
+    height: 6vh;
+    background-color: rgb(16, 16, 16);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    border-bottom: 1px solid wheat;
+         
+}
+
+.logo{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color:var(--navbar-color);
+}
+
+.navbar__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 2.5em;
+    gap: 1em;
+    font-size: .7rem;
+    text-align: center;
+    
+     
+}
+
+.resume-btn{
+    margin-right: 1em;
+    border-radius: 8px;
+    align-self: center;
+    font-family: 'Zen Dots', cursive;
+    font-size: .7rem;
+    padding: 7px 10px;
+    background-color: wheat;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 5px wheat;
+    
+}
+
+#resume{
+    align-self: center;
+}
+
+.header__text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 35vh;
+}
+
+
+.title__1{
+    font-size: 2rem;
+    color: var(--text-color);
+    animation: leftSlide 2s ease;
+      
+}
+
+.title__2{
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: 3px underline rgb(249, 108, 0);
+    text-underline-offset: 5px;
+    animation: rightSlide 2s ease;
+}
+
+.title__1 span{
+    color: rgb(249, 108, 0);
+}
+
+
+
+/* ---------PROJECTS-------- */
+.projects__section{
+    width: 100%;
+    height: 400vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: center;
+   background-color: rgb(16, 16, 16);
+}
+
+.projects__title{
+    text-align: center;
+    letter-spacing: .5em;
+    text-decoration: overline wheat;
+    height: 2em;
+    padding-top: 1em;
+    color: wheat;
+    background-color: rgb(16, 16, 16);
+}
+
+.projects{
+    border: 2px solid wheat;
+    width: 70%;
+    height: 70vh;
+    margin-bottom: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.project-photo{
+    width: 100%;
+    height: 45%;
+    border: 2px solid wheat;
+}
+
+.project-description{
+padding: 5px 20px;
+
+}
+
+.project-buttons{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+    gap: 20px;
+    
+}
+
+.btn{
+    font-family: 'Zen Dots', cursive;
+    
+}
+
+.btn-show{
+    display: none;
+    font-family: 'Zen Dots', cursive;
+}
+
+/* ---------ABOUT ME-------- */
+.about-me__section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+}
+
+.about-me__container{
+    width: 80%;
+    height: 80vh;
+    border: 1px solid blue;
+    display: flex;
+}
+
+.about-me__title{
+    border: 1px solid blue;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-decoration: 4px underline rgb(16, 16, 16);
+    text-underline-offset: 4px;
+    color: var(--text-color);
+}
+
+.about-me__text{
+    border: 1px solid blue;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 3em;
+    color:var(--text-color);
+}
+
+.me{
+    margin-top: 1em;
+}
+
+
+
+/* ---------CONTACT-------- */
+.contact__section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(16, 16, 16);
+}
+
+.contact__container{
+    width: 80%;
+    height: 80vh;
+    border: 1px solid rgb(255, 255, 255);
+    display: flex;
+}
+
+.contact__text{
+    border: 1px solid rgb(255, 255, 255);
+    width: 75%;
+    height: 100%;
+    order:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 3em;
+    color:var(--text-coolor);
+}
+
+.contact__title{
+    border: 1px solid rgb(255, 255, 255);
+    width: 25%;
+    height: 100%;
+    order:2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-decoration: 4px underline wheat;
+    text-underline-offset: 4px;
+    color: wheat;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: .8rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+#name, #email, #subject{
+    width: 10em;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    font-weight: bold;
+    background-color: wheat;
+    
+      
+}
+
+#message{
+    border: 3px solid black;
+    border-radius: 5px;
+    max-width: 10em;
+    max-height: 15em;
+    font-weight: bold;
+    background-color: wheat;
+   
+}
+
+.btn-submit{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    align-self: center;
+    font-family: 'Zen Dots', cursive;
+    font-size: .85rem;
+    padding: .4em 1.8em;
+    margin-top: 1.5em;
+    background-color: wheat;
+    box-shadow: 0 0 5px wheat;
+}
+
+/* ---------FOOTER-------- */
+.footer__section{
+    width: 100%;
+    height: 6vh;
+    border: 1px solid orange;
+   
+}
+
+
+
+/* --------- MEDIA QUERIES -------- */
+
+@media (min-width:566px) {
+.navbar{
+justify-content: center;
+   
+}
+
+header{
+    position: relative;
+    border-bottom: 3px solid black;
+}
+
+.header__text{
+    margin-top: 28vh;
+}
+
+.skate-container{
+background-image: url(/MediaV2/header-removeed.png);
+background-position: cover;
+width: 30em;
+height: 22em;
+position: absolute;
+right: 0;
+bottom: 0;
+transform: translateY(100%);
+display: block;
+animation: skateSlide 6s ease-in 1.5s infinite;
+
+
+} 
+
+.navbar__list{
+    gap:5em;
+}
+
+.logo{
+    display: block; 
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    gap:.5em;
+    font-family: 'Sedgwick Ave Display', cursive;
+    letter-spacing: 2px;
+    align-self: center;
+    color: var(--navbar-color);
+}
+
+#logo{
+    position: absolute;
+    margin-right: 85%;
+    margin-left: 2em;
+    text-decoration: none;
+    align-self: center;
+}
+
+
+#resume{
+    position: absolute;
+    margin-left: 85%;
+    
+}
+
+.projects{
+    width: 50%;
+}
+
+.project-description{
+    height: 35%;
+}
+
+#name, #email, #subject{
+    width: 15em;
+    height: 1.5em;
+}
+
+#message{
+    max-width: 15em;
+}
+
+}
+
+@media (min-width:1024px){
+
+header{
+        position: relative;
+}
+
+ .skate-container{
+        background-image: url(/MediaV2/header-removeed.png);
+        background-position: cover;
+        width: 30em;
+        height: 22em;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+} 
+     
+.navbar{
+    justify-content: center;
+  
+}
+
+.logo{
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    display: flex;
+    gap:.5em;
+    font-family: 'Sedgwick Ave Display', cursive;
+    letter-spacing: 4px;
+    
+}
+
+#logo{
+    position: absolute;
+    margin-right: 85%;
+    margin-left: 2em;
+    align-self: center;
+}
+
+.title__2{
+    padding-bottom: 10em;
+}
+
+.navbar__list{
+    font-size: 1rem;
+} 
+
+.resume-btn{
+    font-size: .9rem;
+}
+    
+.projects__section{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap:2em;
+    align-items: center;
+    
+}
+
+.projects{
+    width: 20%;
+    height: 60%;
+    
+}
+
+.project-description{
+    display: none;
+}
+
+.project-photo{
+    height: 80%;
+}
+
+.title{
+    display: block;
+}
+
+.btn-show{
+    display: block;
+}
+
+.project-buttons{
+    justify-content: space-evenly;
+    width: 100%;
+    height: 15%;
+    align-items:center;
+
+}
+
+.description__slide{
+    width:90%;
+    height: 35%;
+    border: 1px solid wheat;
+    margin-top: 1em;
+}
+
+.about-me__title{
+    font-size: 2rem;
+}
+
+.contact__title{
+    font-size: 2rem;
+}
+
+.projects__title{
+    font-size: 2rem;
+}
+
+
+#name, #email, #subject{
+   width: 20em;
+}
+ #message{
+    max-width: 24em;
+ }
+}
+
+
+
+@media (min-width:1440px){
+
+.title__1{
+    font-size: 2.5rem ;
+}
+
+.title__2{
+    font-size: 1.2rem;
+}
+
+.about-me__container, .contact__container{
+    width: 70%;
+}
+
+.about-me__title, .contact__title{
+    font-size: 2.3rem;
+}
+
+label{
+    font-size: .9em;
+    margin-bottom: .2em;
+}
+#name, #email, #subject{
+    width: 27em;
+
+}
+
+#message{
+    max-width: 35em;
+}
+
+}
+
+
+
+ 
+
+/* ---------- ANIMATIONS and HOVERS------------- */
+
+@keyframes skateSlide { 
+    0% {
+        transform: translateX(100%);
+    }
+    
+    to{
+        transform: translateX(-800%);
+        
+    }
+}
+
+@keyframes leftSlide {
+    0%{transform: translateX(-100%);}
+    100%{ transform: translateX(0); }
+}
+
+@keyframes rightSlide {
+    0%{transform: translateX(100%);}
+    100%{ transform: translateX(0); }
+}
+
+
+.navbar__list li:hover, .resume-btn:hover, .btn-submit:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: scale .5s ease;
+}
+
+.navbar__list li:hover{
+    text-decoration: 2px overline;
+   
+}

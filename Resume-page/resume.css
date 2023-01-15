@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   background-color: wheat;
+    overflow-x: hidden  !important;
+}
+
+.btn-container{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.choice-btn{
+font-size: 1em;
+padding: .5em;
+border: 3px solid black;
+border-radius: 10px;
+font-weight: bold;
+background-color: wheat;
+color: rgb(46, 46, 46);
+box-shadow: 0 0 5px;
+font-family: 'Zen Dots', cursive;
+}
+
+.choice-btn:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: scale .25s ease;
+    background-color: rgb(202, 210, 51);
+    transition: background-color .8s ease;
+    box-shadow: 0 0 15px;
+}
+
+.container{
+    width: 100%;
+    height: 90vh;
+   
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    opacity: 0;
+    
+}
+
+.show{
+    opacity: 1;
+    transition: opacity 1.5s ease;
+}
+
+@media (max-width:425px){
+    img{
+        top: 0;
+    }
+}
