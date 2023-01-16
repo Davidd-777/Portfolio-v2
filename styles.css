@@ -7,7 +7,7 @@
 html{
     scroll-behavior:smooth;
     overflow-x: hidden;
-   
+     
 }
 ::-webkit-scrollbar {
     width: 8px;
@@ -45,7 +45,7 @@ header{
     overflow: hidden;
 }
 
-.skate-container{
+/* .skate-container{
     background-image: url(/MediaV2/header-removeed.png);
     background-position: cover;
     width: 30em;
@@ -56,7 +56,8 @@ header{
     transform: translateY(100%);
     display: block;
     animation: skateSlide 6s ease-in 1.5s infinite;
-}
+   
+} */
 
 .navbar{
     width: 100%;
@@ -214,13 +215,12 @@ padding: 5px 20px;
 
 .about-me__container{
     width: 80%;
-    height: 80vh;
-    border: 1px solid blue;
+    height: 60vh;
     display: flex;
 }
 
 .about-me__title{
-    border: 1px solid blue;
+   border-right: 4px solid black;
     width: 25%;
     height: 100%;
     display: flex;
@@ -235,7 +235,7 @@ padding: 5px 20px;
 }
 
 .about-me__text{
-    border: 1px solid blue;
+   
     width: 75%;
     height: 100%;
     display: flex;
@@ -254,7 +254,7 @@ padding: 5px 20px;
 /* ---------CONTACT-------- */
 .contact__section{
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,13 +263,12 @@ padding: 5px 20px;
 
 .contact__container{
     width: 80%;
-    height: 80vh;
-    border: 1px solid rgb(255, 255, 255);
+    height: 60vh;
     display: flex;
 }
 
 .contact__text{
-    border: 1px solid rgb(255, 255, 255);
+    flex-direction: column;
     width: 75%;
     height: 100%;
     order:1;
@@ -281,7 +280,7 @@ padding: 5px 20px;
 }
 
 .contact__title{
-    border: 1px solid rgb(255, 255, 255);
+    border-left: 3px solid wheat;
     width: 25%;
     height: 100%;
     order:2;
@@ -300,12 +299,14 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-top: 4em;
    
 }
 
 .form-group{
     display: flex;
     flex-direction: column;
+    align-self: center;
 }
 
 label{
@@ -328,7 +329,9 @@ label{
 #message{
     border: 3px solid black;
     border-radius: 5px;
-    max-width: 10em;
+    max-width: 14em;
+    max-width: 10em ;
+    min-width: 10em;
     max-height: 15em;
     font-weight: bold;
     background-color: wheat;
@@ -347,11 +350,44 @@ label{
     box-shadow: 0 0 5px wheat;
 }
 
+.socials-section{
+    width: 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   /* padding-top: 5em; */
+}
+
+.socials{
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 2em;
+}
+
+.github-link{
+    width: 1.3em;
+    height: 1.4em;
+}
+
+.thankyou-message{
+    font-size: .6em;
+    align-self: center;
+    color: wheat;
+    opacity: 1;
+    text-align: center;
+    display: inline-block;
+    padding: 1em;
+}
+
+.paper-plane{
+    display: none;
+}
+
+
 /* ---------FOOTER-------- */
 .footer__section{
     width: 100%;
-    height: 6vh;
-    border: 1px solid orange;
+    height: 1vh;
    
 }
 
@@ -435,6 +471,18 @@ animation: skateSlide 6s ease-in 1.5s infinite;
 
 #message{
     max-width: 15em;
+    min-width: 15em ;
+}
+
+.socials-section{
+    width: 15em;
+}
+
+.paper-plane{
+    display: block;
+    width: 3.5em;
+    height: 3.5em;
+    margin-left: 5em;
 }
 
 }
@@ -454,6 +502,7 @@ header{
         right: 0;
         bottom: 0;
         display: block;
+      
 } 
      
 .navbar{
@@ -504,7 +553,7 @@ header{
 
 .projects{
     width: 20%;
-    height: 60%;
+    height: 70%;
     
 }
 
@@ -554,10 +603,30 @@ header{
 
 #name, #email, #subject{
    width: 20em;
+   height: 1.8em;
 }
  #message{
-    max-width: 24em;
+    max-width: 20em;
+    min-width: 20em ;
  }
+
+ .paper-plane{
+    display: block;
+    width: 5em;
+    height: 5em;
+    margin-left: 10em;
+ }
+
+ .socials{
+    width: 1.8em;
+    height: 1.8em;
+}
+
+.github-link{
+    width: 1.6em;
+    height: 1.7em;
+}
+
 }
 
 
@@ -590,7 +659,17 @@ label{
 }
 
 #message{
-    max-width: 35em;
+    max-width: 27em;
+    min-width: 27em ;
+}
+
+.thankyou-message{
+    margin-left: 4.7em;
+}
+
+.paper-plane{
+    width: 6.5em;
+    height: 6.5em;
 }
 
 }
@@ -626,10 +705,18 @@ label{
 .navbar__list li:hover, .resume-btn:hover, .btn-submit:hover{
     cursor: pointer;
     scale: 1.1;
-    transition: scale .5s ease;
+    transition: scale .3s ease-in-out;
 }
 
 .navbar__list li:hover{
     text-decoration: 2px overline;
    
 }
+
+.socials:hover{
+    transform: translateY(-3px);
+    transition: transform .3s ease-in-out;
+}
+
+
+
