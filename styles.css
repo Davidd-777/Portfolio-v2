@@ -68,6 +68,7 @@ header{
     position: fixed;
     top:0;
     border-bottom: 1px solid wheat;
+    opacity: 1 !important;
          
 }
 
@@ -163,7 +164,6 @@ a{
 }
 
 .projects{
-    border: 2px solid wheat;
     width: 70%;
     height: 70vh;
     margin-bottom: 10em;
@@ -195,7 +195,12 @@ padding: 5px 20px;
 
 .btn{
     font-family: 'Zen Dots', cursive;
-    
+    font-size: .9rem;
+    padding: 7px 10px;
+    background-color: wheat;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 5px wheat;
+    border-radius: 10pc;
 }
 
 .btn-show{
@@ -232,10 +237,11 @@ padding: 5px 20px;
     text-decoration: 4px underline rgb(16, 16, 16);
     text-underline-offset: 4px;
     color: var(--text-color);
+    transform: translateX(-100%);
+    opacity: 0;
 }
 
 .about-me__text{
-   
     width: 75%;
     height: 100%;
     display: flex;
@@ -243,6 +249,8 @@ padding: 5px 20px;
     align-items: center;
     padding: 0px 3em;
     color:var(--text-color);
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 .me{
@@ -277,6 +285,8 @@ padding: 5px 20px;
     align-items: center;
     padding: 0px 3em;
     color:var(--text-coolor);
+    transform: translateX(-100%);
+    opacity: 0;
 }
 
 .contact__title{
@@ -293,6 +303,8 @@ padding: 5px 20px;
     text-decoration: 4px underline wheat;
     text-underline-offset: 4px;
     color: wheat;
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 form{
@@ -355,8 +367,9 @@ label{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-   /* padding-top: 5em; */
-}
+    opacity: 0;
+     transform: translateX(0) !important;
+} 
 
 .socials{
     width: 1.5em;
@@ -377,7 +390,14 @@ label{
     text-align: center;
     display: inline-block;
     padding: 1em;
+    opacity: 0;
 }
+
+.send-display-text{
+    opacity: 1;
+    transition: opacity 2s ease 2s; 
+}
+
 
 .paper-plane{
     display: none;
@@ -390,6 +410,13 @@ label{
     height: 1vh;
    
 }
+
+
+
+
+
+
+
 
 
 
@@ -464,6 +491,10 @@ animation: skateSlide 6s ease-in 1.5s infinite;
     height: 35%;
 }
 
+label{
+    letter-spacing: 2px;
+}
+
 #name, #email, #subject{
     width: 15em;
     height: 1.5em;
@@ -478,11 +509,17 @@ animation: skateSlide 6s ease-in 1.5s infinite;
     width: 15em;
 }
 
+.contact__section{
+    position: relative;
+}
+
 .paper-plane{
     display: block;
+    position: relative;
     width: 3.5em;
     height: 3.5em;
-    margin-left: 5em;
+    transform: translateX(-100%);
+    opacity: 0;
 }
 
 }
@@ -539,11 +576,15 @@ header{
 .resume-btn{
     font-size: .9rem;
 }
+
+.projects__title{
+    margin-top: 3em;
+}
     
 .projects__section{
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 80vh;
     flex-wrap:wrap;
     justify-content: center;
     gap:2em;
@@ -553,7 +594,7 @@ header{
 
 .projects{
     width: 20%;
-    height: 70%;
+    height: 85%;
     
 }
 
@@ -562,15 +603,15 @@ header{
 }
 
 .project-photo{
-    height: 80%;
+    height: 60%;
 }
 
 .title{
-    display: block;
+    display: none;
 }
 
 .btn-show{
-    display: block;
+    display: none;
 }
 
 .project-buttons{
@@ -580,6 +621,8 @@ header{
     align-items:center;
 
 }
+
+
 
 .description__slide{
     width:90%;
@@ -615,6 +658,7 @@ header{
     width: 5em;
     height: 5em;
     margin-left: 10em;
+    opacity: 0;
  }
 
  .socials{
@@ -626,6 +670,25 @@ header{
     width: 1.6em;
     height: 1.7em;
 }
+
+
+
+
+
+/* ------------ HOVERS -------------- */
+
+.projects__section:hover > :not(:hover){
+    opacity: .4;
+    scale: .95;
+    transition: scale 1s ease;
+
+}
+
+.projects:hover{
+    scale: 1;
+    transition: scale 1s ease;
+}
+
 
 }
 
@@ -670,6 +733,7 @@ label{
 .paper-plane{
     width: 6.5em;
     height: 6.5em;
+    opacity: 0;
 }
 
 }
@@ -678,7 +742,7 @@ label{
 
  
 
-/* ---------- ANIMATIONS and HOVERS------------- */
+/* ---------- ANIMATIONS ------------- */
 
 @keyframes skateSlide { 
     0% {
@@ -701,21 +765,58 @@ label{
     100%{ transform: translateX(0); }
 }
 
-
 .navbar__list li:hover, .resume-btn:hover, .btn-submit:hover{
     cursor: pointer;
-    scale: 1.1;
+    scale: 1.05;
     transition: scale .3s ease-in-out;
 }
 
 .navbar__list li:hover{
-    text-decoration: 2px overline;
-   
+    text-decoration: 2px overline; 
 }
 
-.socials:hover{
+.navbar__list li:not(:hover), .resume-btn:not(:hover){
+    scale: 1;
+    transition: scale .3s ease-in-out;
+}
+
+.socials:hover, .btn:hover{
     transform: translateY(-3px);
     transition: transform .3s ease-in-out;
+    cursor: pointer;
+}
+
+.socials:not(:hover), .btn:not(:hover){
+    transform: translate(0);
+    transition: transform .3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+/* --------- OBSERVER ---------- */
+
+.left-slide{
+    transform: translateX(0%);
+    opacity: 1;
+    transition: transform 2s ease;
+}
+
+.right-slide{
+    transform: translateX(0%);
+    opacity: 1;
+    transition: transform 2s ease;
+}
+
+.show-plane{
+    opacity: 1;
+    transition: opacity 2s ease 1.5s;
+    transform: translateX(50px);
 }
 
 
