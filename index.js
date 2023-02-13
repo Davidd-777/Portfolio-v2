@@ -4,6 +4,12 @@ var formSubject = document.getElementById("subject");
 var formMessage = document.getElementById("message");
 var serviceID = 'service_y688bf8';
 var templateID = 'template_fbe1vtf';
+var aboutMeTitle = document.querySelector(".about-me__title");
+var aboutMeText = document.querySelector(".about-me__text");
+var contactTitle = document.querySelector(".contact__title");
+var contactText = document.querySelector(".contact__text");
+var paperPlane = document.querySelector(".paper-plane");
+var socials = document.querySelector(".socials-section");
 function sendMail(params) {
     var tempParams = {
         name: formName.value,
@@ -28,32 +34,20 @@ var sendThankYou = function (e) {
     formMessage.value = "";
 };
 sendBtn === null || sendBtn === void 0 ? void 0 : sendBtn.addEventListener('click', sendThankYou);
-var aboutMeTitle = document.querySelector(".about-me__title");
-var aboutMeText = document.querySelector(".about-me__text");
-var contactTitle = document.querySelector(".contact__title");
-var contactText = document.querySelector(".contact__text");
-var paperPlane = document.querySelector(".paper-plane");
-var socials = document.querySelector(".socials-section");
-var observerLeft = new IntersectionObserver(function (entries) {
+var observerSlides = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-            entry.target.classList.add("left-slide");
+            entry.target.classList.add("slide");
         }
         else {
-            entry.target.classList.remove("left-slide");
+            entry.target.classList.remove("slide");
         }
     });
 });
-var observerRight = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("right-slide");
-        }
-        else {
-            entry.target.classList.remove("right-slide");
-        }
-    });
-});
+observerSlides.observe(aboutMeTitle);
+observerSlides.observe(aboutMeText);
+observerSlides.observe(contactTitle);
+observerSlides.observe(contactText);
 var observerOpacity = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -64,9 +58,23 @@ var observerOpacity = new IntersectionObserver(function (entries) {
         }
     });
 });
-observerLeft.observe(aboutMeTitle);
-observerLeft.observe(contactText);
-observerRight.observe(aboutMeText);
-observerRight.observe(contactTitle);
 observerOpacity.observe(paperPlane);
 observerOpacity.observe(socials);
+var project1 = document.querySelector(".project__1");
+var project2 = document.querySelector(".project__2");
+var project3 = document.querySelector(".project__3");
+var project4 = document.querySelector(".project__4");
+var observerProjects = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("slide-delay");
+        }
+        else {
+            entry.target.classList.remove("slide-delay");
+        }
+    });
+});
+observerSlides.observe(project2);
+observerSlides.observe(project3);
+observerProjects.observe(project1);
+observerProjects.observe(project4);

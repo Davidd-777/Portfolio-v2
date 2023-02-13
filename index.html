@@ -23,16 +23,17 @@
       href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap"
       rel="stylesheet"
     />
-    <script defer src="/index.js"></script>
     <script
+      defer
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-    <script type="text/javascript">
+    <script defer type="text/javascript">
       (function () {
         emailjs.init("gDbSUBIm68ygz3fE8");
       })();
     </script>
+    <script defer src="/index.js"></script>
     <title>David Leoca-Portfolio</title>
   </head>
   <body>
@@ -67,67 +68,98 @@
     </header>
     <main>
       <h2 class="projects__title" id="projects">PROJECTS</h2>
-      <section class="projects__section">
-        <div class="project__1 projects">
-          <div class="project-photo"></div>
-          <p class="title">Title</p>
-          <div class="project-description">
-            <p></p>
+      <div class="help">
+        <section class="projects__section">
+          <div class="project__1 projects">
+            <div class="project-photo">
+              <img class="project-logo" src="/MediaV2/Football.png" alt="" />
+            </div>
+            <p class="title">Footballissima</p>
+            <div class="project-description">
+              <p>
+                A fully responsive landing page where you can read the latest
+                football news and follow your favorite team or league, and also
+                keep track of the world's most important international football
+                competitions.
+              </p>
+            </div>
+            <div class="project-buttons">
+              <a href="https://footballissima.netlify.app/" target="_blank"
+                ><button class="btn">Demo</button></a
+              >
+              <a
+                href="https://github.com/Davidd-777/footballissima"
+                target="_blank"
+                ><button class="btn">Github</button></a
+              >
+            </div>
+            <button class="btn-show">Show description</button>
+            <div class="description__slide"><p>A fully responsive landing page where you can read the latest
+              football news and follow your favorite team or league, and also
+              keep track of the world's most important international football
+              competitions.</p></div>
           </div>
-          <div class="project-buttons">
-            <button class="btn">Demo</button>
-
-            <button class="btn">Github</button>
+          <div class="project__2 projects">
+            <div class="project-photo">
+              <img class="project-logo" src="/MediaV2/guess.png" alt="" />
+            </div>
+            <p class="title">Guess my number!</p>
+            <div class="project-description">
+              <p>
+                Just a minigame where you have to find the correct number with as
+                few attempts as possible. If you exceed 20 attempts, you will
+                lose the game.
+              </p>
+            </div>
+            <div class="project-buttons">
+              <a
+                href="https://guess-my-number-minigame.netlify.app/"
+                target="_blank"
+                ><button class="btn">Demo</button></a
+              >
+              <a
+                href="https://github.com/Davidd-777/Guess-my-number"
+                target="_blank"
+                ><button class="btn">Github</button></a
+              >
+            </div>
+            <button class="btn-show">Show description</button>
+            <div class="description__slide"><p> Just a minigame where you have to find the correct number with as
+              few attempts as possible. If you exceed 20 attempts, you will
+              lose the game.</p></div>
           </div>
-          <button class="btn-show">Show description</button>
-          <div class="description__slide"></div>
-        </div>
-
-        <div class="project__2 projects">
-          <div class="project-photo"></div>
-          <p class="title">Title</p>
-          <div class="project-description">
-            <p></p>
+          <div class="project__3 projects">
+            <div class="project-photo">
+              <img class="project-logo" src="/MediaV2/coming-soon.png" alt="" />
+            </div>
+            <p class="title">Coming soon!</p>
+            <div class="project-description">
+              <p></p>
+            </div>
+            <div class="project-buttons">
+              <button class="btn">Demo</button>
+              <button class="btn">Github</button>
+            </div>
+            <button class="btn-show">Show description</button>
+            <div class="description__slide"><p>Coming soon!</p></div>
           </div>
-          <div class="project-buttons">
-            <button class="btn">Demo</button>
-
-            <button class="btn">Github</button>
+          <div class="project__4 projects">
+            <div class="project-photo">
+              <img class="project-logo" src="/MediaV2/coming-soon.png" alt="" />
+            </div>
+            <p class="title">Coming soon!</p>
+            <div class="project-description">
+              <p></p>
+            </div>
+            <div class="project-buttons">
+              <button class="btn">Demo</button>
+              <button class="btn">Github</button>
+            </div>
+            <button class="btn-show">Show description</button>
+            <div class="description__slide"><p>Coming soon!</p></div>
           </div>
-          <button class="btn-show">Show description</button>
-          <div class="description__slide"></div>
-        </div>
-
-        <div class="project__3 projects">
-          <div class="project-photo"></div>
-          <p class="title">Title</p>
-          <div class="project-description">
-            <p></p>
-          </div>
-          <div class="project-buttons">
-            <button class="btn">Demo</button>
-
-            <button class="btn">Github</button>
-          </div>
-          <button class="btn-show">Show description</button>
-          <div class="description__slide"></div>
-        </div>
-
-        <div class="project__4 projects">
-          <div class="project-photo"></div>
-          <p class="title">Title</p>
-          <div class="project-description">
-            <p></p>
-          </div>
-          <div class="project-buttons">
-            <button class="btn">Demo</button>
-
-            <button class="btn">Github</button>
-          </div>
-          <button class="btn-show">Show description</button>
-          <div class="description__slide"></div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section class="about-me__section" id="about-me">
         <div class="about-me__container">
@@ -142,10 +174,10 @@
           </div>
           <div class="about-me__text">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
-              ducimus porro hic, possimus ipsum dolore quos quo eaque iusto.
-              Blanditiis voluptas laudantium maxime velit consectetur vel vero
-              nesciunt beatae ex?
+              A young enthusiastic, organized, attentive, sociable, with a
+              well-developed team spirit and a very good adaptability to needs.
+              I like to continuously develop and expand my knowledge base using
+              today's available tools and my ability for self-study.
             </p>
           </div>
         </div>

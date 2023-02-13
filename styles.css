@@ -45,20 +45,6 @@ header{
     overflow: hidden;
 }
 
-/* .skate-container{
-    background-image: url(/MediaV2/header-removeed.png);
-    background-position: cover;
-    width: 30em;
-    height: 22em;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    transform: translateY(100%);
-    display: block;
-    animation: skateSlide 6s ease-in 1.5s infinite;
-   
-} */
-
 .navbar{
     width: 100%;
     height: 6vh;
@@ -69,6 +55,7 @@ header{
     top:0;
     border-bottom: 1px solid wheat;
     opacity: 1 !important;
+    z-index: 999;
          
 }
 
@@ -208,6 +195,10 @@ padding: 5px 20px;
     font-family: 'Zen Dots', cursive;
 }
 
+.description__slide{
+    opacity: 0;
+}
+
 /* ---------ABOUT ME-------- */
 .about-me__section{
     width: 100%;
@@ -251,6 +242,11 @@ padding: 5px 20px;
     color:var(--text-color);
     transform: translateX(100%);
     opacity: 0;
+}
+
+.about-me__text p{
+    font-size: 1em;
+       
 }
 
 .me{
@@ -509,9 +505,6 @@ label{
     width: 15em;
 }
 
-.contact__section{
-    position: relative;
-}
 
 .paper-plane{
     display: block;
@@ -523,6 +516,12 @@ label{
 }
 
 }
+
+
+
+
+
+
 
 @media (min-width:1024px){
 
@@ -578,7 +577,7 @@ header{
 }
 
 .projects__title{
-    margin-top: 3em;
+    margin-top: 6em;
 }
     
 .projects__section{
@@ -589,21 +588,34 @@ header{
     justify-content: center;
     gap:2em;
     align-items: center;
+    margin-top: 5em;
     
+}
+
+.project__1, .project__2{
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.project__3, .project__4{
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 .projects{
     width: 20%;
     height: 85%;
-    
+    position: relative;
 }
 
 .project-description{
     display: none;
+    
 }
 
 .project-photo{
     height: 60%;
+    border-radius: 10px;
 }
 
 .title{
@@ -619,17 +631,21 @@ header{
     width: 100%;
     height: 15%;
     align-items:center;
+    position: absolute;
+    top:48%;
 
 }
-
-
 
 .description__slide{
     width:90%;
     height: 35%;
-    border: 1px solid wheat;
     margin-top: 1em;
-}
+    opacity: 1;
+    font-size: .9em;
+    text-align: center;
+    
+} 
+
 
 .about-me__title{
     font-size: 2rem;
@@ -637,6 +653,11 @@ header{
 
 .contact__title{
     font-size: 2rem;
+}
+
+.about-me__text p{
+    font-size: 1.25em;
+       
 }
 
 .projects__title{
@@ -675,27 +696,11 @@ header{
 
 
 
-/* ------------ HOVERS -------------- */
-
-.projects__section:hover > :not(:hover){
-    opacity: .4;
-    scale: .95;
-    transition: scale 1s ease;
-
-}
-
-.projects:hover{
-    scale: 1;
-    transition: scale 1s ease;
-}
-
-
-}
 
 
 
 @media (min-width:1440px){
-
+    
 .title__1{
     font-size: 2.5rem ;
 }
@@ -740,8 +745,6 @@ label{
 
 
 
- 
-
 /* ---------- ANIMATIONS ------------- */
 
 @keyframes skateSlide { 
@@ -765,6 +768,23 @@ label{
     100%{ transform: translateX(0); }
 }
 
+/* @keyframes descriptionSlide {
+    0%{transform: translateY(-300px);
+        opacity: 0;
+    
+    }
+    30%{opacity:0}
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    }
+    
+.abc{
+    animation: descriptionSlide 1s ease 0s 1;
+}  */
+
 .navbar__list li:hover, .resume-btn:hover, .btn-submit:hover{
     cursor: pointer;
     scale: 1.05;
@@ -775,9 +795,24 @@ label{
     text-decoration: 2px overline; 
 }
 
-.navbar__list li:not(:hover), .resume-btn:not(:hover){
+.navbar__list li:not(:hover), .resume-btn:not(:hover), .btn-submit:not(:hover), .project-photo:not(:hover){
     scale: 1;
     transition: scale .3s ease-in-out;
+}
+
+/* .projects__section:hover > :not(:hover){
+    opacity: .4;
+    scale: .95;
+    transition: scale 1s ease;
+
+} */
+
+.project-photo:hover{
+    scale: 1.03;
+    transition: scale 1s ease;
+}
+
+
 }
 
 .socials:hover, .btn:hover{
@@ -801,16 +836,11 @@ label{
 
 /* --------- OBSERVER ---------- */
 
-.left-slide{
+.slide{
     transform: translateX(0%);
     opacity: 1;
     transition: transform 2s ease;
-}
-
-.right-slide{
-    transform: translateX(0%);
-    opacity: 1;
-    transition: transform 2s ease;
+    
 }
 
 .show-plane{
@@ -819,5 +849,32 @@ label{
     transform: translateX(50px);
 }
 
+.slide-delay{
+    transform: translateX(0%);
+    opacity: 1;
+    transition: transform 2s ease 0.2s;
+   
+}
 
+
+
+.help{
+   display: block;
+   background: transparent;
+   z-index: 999;
+   
+}
+
+
+.project-logo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-description p{
+    text-align: center;
+    font-size: .75em;
+    
+}
 
